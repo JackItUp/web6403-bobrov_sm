@@ -1,0 +1,59 @@
+
+body {
+    background: linear-gradient(90deg, pink, yellow, lightgreen, skyblue);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#title {
+    color: red;
+    font-size: 40px;
+}
+
+nav {
+    background-color: black;
+    padding: 15px;
+}
+
+    nav a {
+        color: white;
+        margin: 15px;
+    }
+
+.box {
+    background-color: white;
+    border: 5px dashed purple;
+    padding: 20px;
+    margin: 30px;
+}
+
+span {
+    color: red;
+    font-weight: bold;
+}
+
+/* Оформление таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid purple;
+    padding: 10px;
+}
+
+/* Выравнивание по левому краю */
+.left {
+    text-align: left;
+}
+
+/* Выравнивание по центру */
+.center {
+    text-align: center;
+}
+
+/* Выравнивание по правому краю */
+.right {
+    text-align: right;
+}
