@@ -1,0 +1,229 @@
+/* Все используемые цвета объявлены только здесь. */
+:root {
+    --color-pink: pink;
+    --color-yellow: yellow;
+    --color-green: lightgreen;
+    --color-blue: skyblue;
+    --color-red: red;
+    --color-black: black;
+    --color-white: white;
+    --color-purple: purple;
+}
+
+/* Страницы ЛР №2 сохраняют исходные отступы. */
+.page--classic {
+    margin: 8px;
+    padding: 0;
+    min-height: auto;
+}
+
+/* Общие стили и навигация */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 12px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg,
+        var(--color-pink), var(--color-yellow),
+        var(--color-green), var(--color-blue));
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.site-title {
+    display: table;
+    max-width: 100%;
+    margin: 20px auto;
+    color: var(--color-red);
+    font-size: 40px;
+}
+
+.main-nav {
+    padding: 15px;
+    background-color: var(--color-black);
+}
+
+.main-nav__link {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.main-nav__link {
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.main-nav__link--active {
+    text-decoration: underline;
+}
+
+.info-box,
+.product-card {
+    padding: 20px;
+    background-color: var(--color-white);
+    border: 5px dashed var(--color-purple);
+}
+
+.info-box__highlight,
+.product-card__price-value {
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+/* Главная страница: исходное расположение текста и кота. */
+.home-layout__info {
+    margin: 30px;
+}
+
+/* Две равные колонки внутри информационного блока главной страницы. */
+.home-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.home-info__item {
+    flex: 1;
+    min-width: 0;
+}
+
+.home-layout__cat-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Плавное покачивание заголовков на всех страницах. */
+.site-title {
+    animation: sway 2s ease-in-out infinite;
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+/* Каталог — двухколоночная сетка Grid. */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin: 30px;
+}
+
+.product-card {
+    margin: 0;
+}
+
+.product-card__image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Страница «О магазине» */
+.about-content .info-box {
+    margin: 30px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table__cell {
+    border: 2px solid var(--color-purple);
+    padding: 10px;
+}
+
+.price-table__cell--left {
+    text-align: left;
+}
+
+.price-table__cell--center {
+    text-align: center;
+}
+
+.price-table__cell--right {
+    text-align: right;
+}
+
+/* Страница авторизации */
+.login-page {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.login-form__field {
+    margin-bottom: 15px;
+}
+
+.login-form__label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form__input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid var(--color-purple);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font: inherit;
+}
+
+.login-form__agreement {
+    display: block;
+    margin: 15px 0;
+}
+
+.login-form__button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font: inherit;
+    cursor: pointer;
+}
+
+.login-form__button:hover {
+    background-color: var(--color-purple);
+}
+
+.login-form__status {
+    font-weight: bold;
+}
+
+.login-page__notice {
+    font-size: 14px;
+}
+
+/* На небольших экранах заголовок становится компактнее. */
+@media (max-width: 600px) {
+    .site-title {
+        font-size: 30px;
+    }
+
+    .home-info {
+        flex-direction: column;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-title {
+        animation: none;
+    }
+}
